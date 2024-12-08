@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Medjobhub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signin.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1>MedJobHub</h1>
+          <nav>
+            <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('medabout') }}">About</a></li>
+            <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            {% if 'user_id' in session %}
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            {% endif %}
+                
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    {% block content %}
+    <div class="container1">
+        <div class="form-box">
+          <h1 id="title">Sign In</h1>
+              
+          <div class="flash-container" id="flash-container">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    
+    
+          <!-- Sign In Form -->
+          <form id="otpForm" method="POST" action="{{ url_for('verify_otp') }}">
+            <h2 id="otpTitle">Enter OTP</h2>
+            <div class="input-group">
+              <div class="input-field">
+                <i class="fa-solid fa-key"></i>
+                <input type="hidden" name="username" value="{{ username }}">
+                <input
+                  type="text"
+                  placeholder="Enter OTP"
+                  id="otpInput" name="otp"
+                  required />
+              </div>
+            </div>
+            <div class="btn-field">
+              <button type="submit" id="verifyOtpBtn">Verify OTP</button>
+            </div>
+          </form>
+    
+          <!-- New User Link -->
+          <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
+        </div>
+    </div>
+    <script>
+      // Show flash container
+      const flashContainer = document.getElementById('flash-container');
+      if (flashContainer && flashContainer.innerHTML.trim() !== '') {
+          flashContainer.style.display = 'block';
+          // Hide after 3 seconds
+          setTimeout(() => {
+              flashContainer.style.display = 'none';
+          }, 3000); // 3000ms = 3 seconds
+      }
+  </script>
+    {% endblock %}
+</body>
+</html>

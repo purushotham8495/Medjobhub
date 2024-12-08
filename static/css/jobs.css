@@ -1,0 +1,352 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: space-between; /* Space out logo, title, and nav */
+  align-items: center; /* Align vertically */
+  padding: 0 4rem;
+}
+
+/* Logo Styling */
+.stethoscope-img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+  margin-bottom: 1rem; /* Prevent shrinking */
+}
+
+/* Title Styling */
+.container h1 {
+  font-size: 36px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  flex-grow: 1; /* Push nav to the right */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Navigation Styling */
+nav {
+  flex-shrink: 0; /* Prevent nav from shrinking */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Flex layout for nav items */
+  gap: 20px; /* Equal spacing between nav items */
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+  justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 10px; /* Add clickable padding */
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.expect-section {
+  display :flex ;
+  flex-direction :column; /* Change to row for side-by-side layout */
+  border-radius :30px; /* Rounded corners */
+  padding :40px; /* Padding inside the border */
+  margin-top :30px; /* Space above this section from previous content */
+}
+.image-container { 
+  flex-basis :50%; /* Adjusted for side-by-side layout */
+  display :flex ; 
+  justify-content :center ; 
+  align-items :center;  
+}
+.image-container img { /* Added styles for images */
+  max-width :100%; /* Make sure image fits within its container */
+  height:auto ; /* Maintain aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  border-radius:10px; /* Optional rounded corners for images */
+}
+.responsibilities-border {
+  border-width: 5px; /* Border width */
+  border-style: solid; /* Solid border style */
+  border-image-source: linear-gradient(to right, #0000ff, #00f, #00ffff); /* Multicolored gradient */
+  border-image-slice: 1; /* Ensure the gradient fills the border */
+  border-radius: 20px; /* Rounded corners for a softer look */
+  padding: 30px; /* Increased padding inside the border */
+  margin-top: 30px; /* Space above this section from previous content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect around the responsibilities section */
+}
+
+.title {
+  text-align: center; 
+  color: black; 
+  font-size: 3em; 
+  margin-top: 10px; 
+  margin-bottom: 50px; 
+}
+.content {
+  position: relative; 
+  z-index: 2; 
+  color: black; 
+  display: flex; 
+  height:auto; /* Allow height to adjust based on content */
+  min-height: 100vh; /* Minimum height to occupy full viewport */
+}
+.text-section {
+  flex-basis: 50%; 
+  padding-left: 40px; 
+  padding-right: 40px; 
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  font-size: x-large; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+/* Hover behavior: keep .this_page hovered if no other links are hovered */
+
+
+.hero {
+  margin: 1rem;
+  font-size: xx-large;
+  color: black;
+  text-align: left;
+  padding: 3rem 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+  display: block; /* Makes the entire grid-item clickable */
+  height: 100%; /* Ensures link covers the full grid-item */
+  width: 100%;
+}
+
+.grid-item:hover {
+  background-color: #0033cc;
+  color: white;
+  transform: translateY(-5px); /* Adds a lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item:hover a {
+  color: white; /* Ensures text remains visible on hover */
+}
+
+footer {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-bottom: 2px solid #002699;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Address Section */
+.address-section {
+  flex: 2;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.address-section strong {
+  font-size: 16px;
+}
+
+/* Download Section */
+.download-section {
+  flex: 1;
+  text-align: center;
+}
+
+.download-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.store-icon {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.store-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media {
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #80b3ff;
+  transform: scale(1.2);
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.links ul li {
+  margin: 5px 0;
+}
+
+.links ul li a {
+  color: #d9e6ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  font-weight: bold;
+  color: #0033cc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .address-section {
+    text-align: center;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Adjust navigation */
+  .container {
+    flex-direction: column; /* Stack logo, title, and nav vertically */
+    padding: 0 1rem; /* Adjust padding for mobile */
+    align-items: center; /* Center the content */
+  }
+
+  .stethoscope-img {
+    margin-bottom: 1rem; /* Spacing below the logo */
+  }
+
+  nav ul {
+    flex-direction: row; /* Horizontal layout for mobile */
+    justify-content: center; /* Center align nav items */
+    gap: 20px; /* Equal spacing between items */
+    margin-top: 10px; /* Add spacing between logo and nav */
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Adjust font size for mobile */
+    padding: 5px 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack grid items on small screens */
+    gap: 20px;
+  }
+
+  .hero {
+    font-size: x-large;
+    padding: 2rem 1rem;
+  }
+}

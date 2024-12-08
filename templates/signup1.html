@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Medjobhub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1>MedJobHub</h1>
+          <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('medabout') }}">About</a></li>
+                <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <div class="container1">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                    <div class="flash {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <form id="signupForm" method="POST" action="{{ url_for('signup') }}">
+                <div class="input-group">
+
+                    <!-- First Name -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="First Name" name="first_name" required pattern="[A-Za-z]+" title="First name should contain only letters.">
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Last Name" name="last_name" required pattern="[A-Za-z]+" title="Last name should contain only letters.">
+                    </div>
+
+                    <!-- Username -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" name="username" required pattern=".{3,}" title="Username must be at least 3 characters long.">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" placeholder="Phone Number" name="phone" required pattern="[0-9]{10}" title="Phone number must be 10 digits.">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <select name="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-calendar"></i>
+                        <input type="number" placeholder="Age" name="age" required min="18" max="100" title="Age must be between 18 and 100.">
+                    </div>
+                    
+                    <!--Address-->
+                    <div class="input-field">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Address" name="address" required title="Address cannot be empty.">
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required pattern=".{8,}" title="Password must be at least 8 characters long.">
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" name="confirm_password" required pattern=".{8,}" title="Passwords must match.">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="btn-field">
+                    <button type="submit" id="registerBtn">Register</button>
+                </div>
+            </form>
+            <p id="loginLink">Already have an account? <a href="{{ url_for('signin') }}">Sign In</a></p>
+
+
+        </div>
+    </div>
+</body>
+</html>

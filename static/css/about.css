@@ -1,0 +1,928 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  line-height: 1.6;
+
+}
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}  
+h2,
+h3 {
+  color: #0033cc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stethoscope-img {
+  height: 4rem;
+  width: 150px; /* Adjust size of logo */
+  height: auto;
+  width: 4rem;
+  margin-right: 20px;
+  border: none;
+
+  visibility: visible;
+  opacity: 1; /* Ensures no background around the image */
+}
+
+.container h1 {
+  font-size: 36px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  flex-grow: 1; /* Ensure h1 takes available space */
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-self: flex-end;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.video-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-box {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-box h2 {
+  font-size: 24px;
+  color: #0033cc;
+  margin-bottom: 10px;
+}
+
+.subscription-box p {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.subscription-box form {
+  width: 100%;
+}
+
+.subscription-box form input,
+.subscription-box form button {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.subscription-box form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.subscription-box form button {
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  max-width: 8rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subscription-box form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+}
+
+footer {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-bottom: 2px solid #002699;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Address Section */
+.address-section {
+  flex: 2;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.address-section strong {
+  font-size: 16px;
+}
+
+/* Download Section */
+.download-section {
+  flex: 1;
+  text-align: center;
+}
+
+.download-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.store-icon {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.store-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media {
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #80b3ff;
+  transform: scale(1.2);
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.links ul li {
+  margin: 5px 0;
+}
+
+.links ul li a {
+  color: #d9e6ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  font-weight: bold;
+  color: #0033cc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-section {
+    text-align: center;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.footer_logo{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.footer_logo img{
+  margin-right: 8px;
+}
+.text{
+  font-size: 30px;
+  font-weight: 600;
+  
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff; /* White background to stand out */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  max-width: 90%;
+  gap: 2rem; /* Adds spacing between elements */
+}/* General Styles */
+.video-container {
+  flex: 1;
+  margin-left: 30px;
+  border-radius: 20%;
+  padding: 1rem;
+}
+
+.subscription-box {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  width: 100%;
+  margin-left: 2%;
+}
+
+.subscription-box h2 {
+  margin-bottom: 10px;
+}
+
+.subscription-box p {
+  margin-bottom: 20px;
+}
+
+.subscription-box form {
+  display: inline-block;
+}
+
+.subscription-box input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscription-box button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #18ec3b;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust video container margin and subscription box padding */
+  .video-container {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    padding: 1rem;
+  }
+
+  .subscription-box {
+    padding: 1.5rem; /* Adjust padding for mobile */
+  }
+
+  /* Ensure form inputs and button take full width on mobile */
+  .subscription-box input,
+  .subscription-box button {
+    width: 100%; /* Full width for mobile */
+    padding: 12px; /* Adjust padding for better usability */
+  }
+
+  /* Adjust video width to ensure it scales nicely */
+  video {
+    width: 100%; /* Make video scale on smaller screens */
+  }
+}
+
+/* Small Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+  .video-container {
+    margin-left: 0; /* Remove margin completely */
+    padding: 0.5rem; /* Reduce padding on smaller screens */
+  }
+
+  .subscription-box {
+    padding: 1rem; /* Reduce padding for small mobile */
+  }
+
+  .subscription-box h2 {
+    font-size: 1.5rem; /* Smaller heading font for mobile */
+    margin-bottom: 8px;
+  }
+
+  .subscription-box p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+    margin-bottom: 15px;
+  }
+
+  /* Make input fields and button more mobile-friendly */
+  .subscription-box input,
+  .subscription-box button {
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+/* Large Screens (Desktop and above) */
+@media screen and (min-width: 1200px) {
+  .video-container {
+    margin-left: 30px; /* Keep the left margin for large screens */
+    padding: 2rem; /* More padding for desktop */
+  }
+
+  .subscription-box {
+    padding: 2.5rem; /* Increase padding for larger screens */
+  }
+
+  /* Ensure video container and subscription box are aligned correctly */
+  .subscription-box h2 {
+    font-size: 2rem; /* Larger heading font for desktop */
+  }
+
+  .subscription-box p {
+    font-size: 1rem; /* Larger paragraph font for desktop */
+  }
+}
+
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.store-icon {
+  /* width: 100px; 
+  height: 100px; */
+  border-radius: 10%; /* Adds a subtle rounded effect */
+  transition: transform 0.3s ease;
+}
+.store-icon2 {
+  width: 100px; /* Ensures uniform size */
+  height: 37px;
+  border-radius: 10%; /* Adds a subtle rounded effect */
+  transition: transform 0.3s ease;
+}
+
+.store-icon:hover {
+  transform: scale(1.1); /* Adds a hover zoom effect */
+}
+.store-icon2:hover {
+  transform: scale(1.1); /* Adds a hover zoom effect */
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Space between each block (text + icon) */
+  padding: 20px;
+}
+
+/* Style for each individual item (text + icon block) */
+.social-item {
+  text-align: center;
+}
+
+/* Style for the icon */
+.social-item i {
+  font-size: 40px; /* Icon size */
+  color: white; /* Icon color */
+  margin-top: 10px; /* Space between text and icon */
+}
+
+/* Style for the text */
+.social-item a {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.about {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #2C3E50;
+}
+
+.about h1 {
+  color: #2C3E50;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.about h2{
+  color: #2C3E50;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.about p {
+  color: #2d2d2d;
+  font-size: 20px;
+}
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  color: #2d2d2d;
+  background-color: #ffffff;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-image {
+  max-width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  
+}
+
+.hero p {
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.mission-section, .vision-section {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: #007BFF;
+  background: #eaf4ff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.card p {
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-image {
+      max-width: 80%;
+      margin: 1rem 0;
+  }
+
+  .hero-content {
+      max-width: 100%;
+  }
+
+  .card {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .card-icon {
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* Core Values Section */
+/* General Section Styles */
+.values-section,
+.impact-section {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* Heading Styles */
+.values-section h2,
+.impact-section h2 {
+  font-size: 35px;
+  font-family: 600;
+}
+
+/* Flexbox container for cards */
+.value-cards-container,
+.impact-cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+/* Card Styles */
+.value-card,
+.impact-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin: 1rem; /* Ensure spacing between cards */
+}
+
+.value-card:hover,
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
+}
+
+/* Icon Styles */
+.value-card i,
+.impact-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.value-card .fa-handshake { color: #28a745; }
+.value-card .fa-cogs { color: #007bff; }
+.value-card .fa-bolt { color: #ffc107; }
+
+.impact-card .fa-briefcase { color: #28a745; }
+.impact-card .fa-hospital { color: #007bff; }
+.impact-card .fa-user-md { color: #ffc107; }
+
+/* Title and Text Styles */
+.value-card h4,
+.impact-card h4 {
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.value-card p,
+.impact-card p {
+  color: #000;
+  font-size: 1rem;
+}
+
+/* Mobile and Tablet Responsiveness */
+@media screen and (max-width: 768px) {
+  .values-section h2,
+  .impact-section h2 {
+    font-size: 28px;
+  }
+
+  .value-cards-container,
+  .impact-cards-container {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .value-card,
+  .impact-card {
+    width: 250px; /* Reduce card width for tablets */
+    height: auto; /* Allow cards to adjust height */
+  }
+
+  .value-card h4,
+  .impact-card h4 {
+    font-size: 1.6rem; /* Smaller heading on mobile */
+  }
+
+  .value-card p,
+  .impact-card p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
+/* Small Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+  .values-section h2,
+  .impact-section h2 {
+    font-size: 24px; /* Smaller headings on mobile */
+  }
+
+  .value-card,
+  .impact-card {
+    width: 100%; /* Cards will take full width on small screens */
+    height: auto; /* Let cards resize dynamically */
+    margin: 1rem 0; /* Add vertical margin for spacing */
+  }
+
+  .value-card h4,
+  .impact-card h4 {
+    font-size: 1.4rem; /* Smaller title on very small screens */
+  }
+
+  .value-card p,
+  .impact-card p {
+    font-size: 0.8rem; /* Even smaller text on very small screens */
+  }
+}
+
+/* Extra Large Screens */
+@media screen and (min-width: 1200px) {
+  .value-card,
+  .impact-card {
+    width: 350px; /* Increase card width on large screens */
+    height: 350px;
+  }
+
+  .values-section h2,
+  .impact-section h2 {
+    font-size: 40px; /* Larger headings on large screens */
+  }
+}
+
+/* Why Choose MedJobHub Section */
+.why-us-section {
+  background-color: #ffffff; /* White background for the section */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.why-container h2 {
+  font-size: 2.5rem;
+  color: #333333; /* Dark gray for the heading */
+  margin-bottom: 2rem;
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 350px;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Floating Icon Style */
+.reason i {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Lines under the icons */
+.line {
+  width: 2px;
+  height: 50px;
+  margin-bottom: 1.5rem;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Reason Text Section */
+.reason-text {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.reason-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Different Colors for Each Reason */
+.reason:nth-child(1) i {
+  color: #ff5733; /* Orange-red for streamlined recruitment */
+}
+
+.reason:nth-child(2) i {
+  color: #33cc99; /* Teal for pan-India network */
+}
+
+.reason:nth-child(3) i {
+  color: #f39c12; /* Yellow for dedicated support */
+}
+
+/* Color for the lines */
+.reason:nth-child(1) .line {
+  background-color: #ff5733; /* Matching orange-red */
+}
+
+.reason:nth-child(2) .line {
+  background-color: #33cc99; /* Matching teal */
+}
+
+.reason:nth-child(3) .line {
+  background-color: #f39c12; /* Matching yellow */
+}
+
+/* Reason Text Colors */
+.reason:nth-child(1) .reason-text h3 {
+  color: #ff5733;
+}
+
+.reason:nth-child(2) .reason-text h3 {
+  color: #33cc99;
+}
+
+.reason:nth-child(3) .reason-text h3 {
+  color: #f39c12;
+}
+
+.reason-text p {
+  color: #555; /* Standard text color */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.reason:hover {
+  transform: translateY(-5px); /* Lift the reason on hover */
+}
+
+.reason:hover i {
+  transform: translateY(-5px); /* Lift the icon on hover */
+}
+
+.reason:hover .line {
+  height: 70px; /* Increase line height on hover */
+  background-color: #000; /* Change line color to black on hover */
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .reasons {
+      flex-direction: column; /* Stack the items vertically on smaller screens */
+      align-items: center;
+  }
+
+  .reason {
+      max-width: 90%; /* Adjust width on smaller screens */
+      margin-bottom: 1.5rem; /* Add space between stacked reasons */
+  }
+}

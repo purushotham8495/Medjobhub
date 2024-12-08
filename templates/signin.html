@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Medjobhub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signin.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1>MedJobHub</h1>
+          <nav>
+            <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('medabout') }}">About</a></li>
+            <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            {% if 'user_id' in session %}
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            {% endif %}
+                
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    {% block content %}
+    <div class="container1">
+        <div class="form-box">
+          <h1 id="title">Sign In</h1>
+              
+          <!-- Flash Messages -->
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <div class="flash-messages">
+                {% for category, message in messages %}
+                  <div class="flash {{ category }}">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endwith %}
+    
+          <!-- Sign In Form -->
+          <form id="loginForm" method="POST" action="{{ url_for('signin') }}">
+            <div class="input-group">
+              <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username" name="username" required>
+              </div>
+              <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" name="password" required>
+              </div>
+            </div>
+            <div class="btn-field">
+              <button type="submit" id="loginBtn">Login</button>
+            </div>
+          </form>
+    
+          <!-- New User Link -->
+          <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+}
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}  
+h2,
+h3 {
+  color: #0033cc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container h1 {
+  align-self: flex-start;
+}
+.stethoscope-img {
+  height: 4rem;
+  width: 4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-self: flex-end;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.container1 {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff82;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 25px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  color: #0033cc;
+  border: 2px solid #0000004f;
+  /* margin-top: 50px 0 50px; */
+}
+
+.form-box h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #007bff;
+  position: relative;
+}
+
+.form-box h1::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.input-field {
+  background: #eaeaea;
+  margin: 20px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: 0.3s ease;
+}
+
+input, select {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.input-field i {
+  margin-right: 10px;
+  color: #999;
+}
+
+select {
+  background: #eaeaea;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+form p {
+  text-align: center;
+  font-size: 13px;
+}
+
+form p a {
+  text-decoration: none;
+  color: #0033cc;
+  font-weight: bold;
+}
+
+form p a:focus {
+  text-decoration: none;
+  color: #0033cc;
+  font-weight: bold;
+}
+
+.btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-field button {
+  padding: 12px 24px;
+background-color: #007bff;
+color: white;
+font-size: 18px;
+font-weight: bold;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-bottom: 10px;
+}
+
+.btn-field button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .brand {
+      flex: 0;
+      margin-bottom: 1rem;
+  }
+
+  nav ul {
+      justify-content: flex-start;
+  }
+
+  .form-box {
+      width: 80%;
+  }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+  .form-box {
+      padding: 20px;
+  }
+
+  .form-box h1 {
+      font-size: 24px;
+  }
+
+  .input-field {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .input-field i {
+      margin-bottom: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+  }
+
+  nav ul li {
+      margin: 0;
+  }
+}
+
+/* Flash message container */
+.flash-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+/* Flash message container */
+.flash-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+/* Flash message styling */
+.flash-message {
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slide-down 0.3s ease-out;
+}
+
+.flash-message.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.flash-message.error {
+  background-color: #f44336;
+  color: white;
+}
+
+.flash-message.info {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Slide-down animation */
+@keyframes slide-down {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}

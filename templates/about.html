@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_US</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <img src="{{ url_for('static', filename='images/ss11.png') }}" alt="Image" class="stethoscope-img">
+            <h1>MedJobHub</h1>
+            <nav>
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <a href="{{ url_for('medabout') }}">About</a>
+                <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+              
+
+              </ul>
+            </nav>
+          </div>
+    </header>
+    {% block content %}
+    <main>
+        <div class="about">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>About MedJobHub</h1>
+                <p>Welcome to MedJobHub, where we connect passion with purpose. Our platform is designed to create a seamless bridge between healthcare professionals and institutions, ensuring that every opportunity meets its perfect match. We’re redefining healthcare recruitment for a better tomorrow.</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/ss11.png') }}"" alt="Healthcare professionals" class="hero-image">
+        </header>
+        <section class="mission-section">
+            <div class="content-container">
+                <h2>Our Mission</h2>
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <p>To empower medical professionals and healthcare institutions by offering a transparent, accessible, and innovative recruitment platform.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <p>To simplify job opportunities and workforce management with technology-driven solutions, fostering trust and meaningful connections.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <p>To address staffing challenges, ensuring healthcare providers deliver exceptional care across urban and rural communities.</p>
+                </div>
+            </div>
+        </section>
+        <section class="vision-section">
+            <div class="content-container">
+                <h2>Our Vision</h2>
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <p>To become India’s most trusted healthcare recruitment platform, improving workforce distribution and healthcare accessibility nationwide.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <p>To elevate healthcare standards by bridging the gap between urban and rural systems, enabling equitable access to quality care.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <p>To create a sustainable impact on communities by connecting the right talent with the right opportunities, fostering excellence and inclusivity.</p>
+                </div>
+            </div>
+        </section>
+
+        <head>
+            <!-- Add Font Awesome CDN for icons -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        </head>
+        
+        <section class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="value-cards-container">
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Integrity</h4>
+                    <p>We operate with honesty and transparency, building trust with both job seekers and employers.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Innovation</h4>
+                    <p>Our platform leverages the latest technology to provide efficient and accessible recruitment solutions.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Impact</h4>
+                    <p>We focus on making a meaningful difference in the healthcare sector by addressing critical staffing gaps.</p>
+                </div>
+            </div>
+        </section>
+
+        <head>
+            <!-- Add Font Awesome CDN for icons -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        </head>
+        
+        <head>
+            <!-- Add Font Awesome CDN for icons -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        </head>
+        
+        <section class="why-us-section">
+            <div class="why-container">
+                <h2>Why Choose MedJobHub?</h2>
+                <div class="reasons">
+                    <div class="reason">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="line"></div>
+                        <div class="reason-text">
+                            <h3>Streamlined Recruitment</h3>
+                            <p>Our user-friendly platform ensures a hassle-free experience for both job seekers and recruiters.</p>
+                        </div>
+                    </div>
+                    <div class="reason">
+                        <i class="fas fa-network-wired"></i>
+                        <div class="line"></div>
+                        <div class="reason-text">
+                            <h3>Pan-India Network</h3>
+                            <p>We connect professionals and institutions from urban hubs to remote rural areas, bridging healthcare gaps.</p>
+                        </div>
+                    </div>
+                    <div class="reason">
+                        <i class="fas fa-headset"></i>
+                        <div class="line"></div>
+                        <div class="reason-text">
+                            <h3>Dedicated Support</h3>
+                            <p>Our dedicated team is always ready to assist with personalized recruitment solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="impact-section">
+            <h2>Our Impact</h2>
+            <div class="impact-cards-container">
+                <div class="impact-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>5,000+ Jobs Filled Nationwide</h4>
+                    <p>Connecting medical professionals with job opportunities across India, helping to fill critical healthcare positions.</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-hospital"></i>
+                    <h4>1,000+ Hospitals and Clinics Served</h4>
+                    <p>Serving healthcare institutions with a diverse range of qualified professionals to support patient care and operations.</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-user-md"></i>
+                    <h4>10,000+ Healthcare Professionals Connected</h4>
+                    <p>Helping thousands of healthcare workers find meaningful roles in hospitals, clinics, and care centers across the nation.</p>
+                </div>
+            </div>
+        </section>
+        
+        <head>
+            <!-- Add Font Awesome CDN for icons -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        </head>
+        
+    </div>
+
+
+
+
+        <div class="content-wrapper">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+      
+            <div class="subscription-box">
+              <h2>Stay Connected</h2>
+              <p>Subscribe to receive newsletters, magazines, and notifications.</p>
+              <form>
+                <input type="text" placeholder="Enter Your Name" required />
+                <input type="email" placeholder="Enter Your Email" required />
+                <input type="tel" placeholder="Enter Your Phone Number" required />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        
+    </main>
+    
+      {% endblock %}
+</body>
+</html>

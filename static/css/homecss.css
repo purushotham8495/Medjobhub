@@ -1,0 +1,1232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #81d9e9; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  
+  color: #000;
+}
+
+h2,
+h3 {
+  color: #0033cc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem; /* Reduced padding for smaller screens */
+  flex-wrap: wrap; /* Allows wrapping on smaller devices */
+  box-sizing: border-box;
+}
+
+.stethoscope-img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.container h1 {
+  font-size: 1.8rem; /* Scales for smaller screens */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ensures text doesn't overflow */
+}
+
+nav {
+  flex-shrink: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Reduced gap for smaller screens */
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: center; /* Center-aligns items if wrapping */
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1rem; /* Adjusts font size */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+  }
+
+  .stethoscope-img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+    justify-content: center; /* Center navigation links */
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .stethoscope-img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .container h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f8fc;
+  padding: 50px;
+  height: 85vh;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.hero-content .cta-button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+  background-color: #0056b3;
+}
+.hero-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+
+/* For devices smaller than 1200px (e.g., tablets) */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 2rem; /* Reduced padding */
+  }
+
+  .hero {
+    flex-direction: column; /* Stack hero content and image vertically */
+    padding: 30px;
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Allow content to take full width */
+    text-align: center;
+  }
+  .hero-image {
+    max-width: 100%; /* Ensure the image container does not overflow */
+    margin-top: 20px; /* Spacing between content and image */
+    display: block; /* Ensure the image behaves like a block-level element */
+    text-align: center; /* Center the image within its flex container */
+    overflow: hidden; /* Prevent any overflow outside the container */
+  }
+  
+  .hero-image img {
+    width: 100%; /* Make the image take full width of the container */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distorting */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Add a shadow for a polished look */
+  }
+  
+  /* Responsive Adjustments for smaller screens */
+  @media (max-width: 1200px) {
+    .hero {
+      flex-direction: column; /* Stack the content and image vertically */
+      padding: 30px; /* Adjust padding */
+      height: auto; /* Allow height to adjust for smaller screens */
+    }
+  
+    .hero-image {
+      margin-top: 20px; /* Add spacing between content and image */
+    }
+  
+    .hero-image img {
+      width: 100%; /* Make sure the image always takes full width */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Keep the image covering the area without distortion */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 32px; /* Adjust heading font size for smaller screens */
+    }
+  
+    .hero-content p {
+      font-size: 16px; /* Adjust paragraph font size */
+    }
+  
+    .hero-image img {
+      width: 100%; /* Ensure image takes full width */
+      height: auto; /* Keep aspect ratio intact */
+    }
+  }
+  
+
+
+  .hero-content h1 {
+    font-size: 36px; /* Smaller heading on smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 18px; /* Adjust paragraph size */
+  }
+
+  .hero-content .cta-button {
+    font-size: 16px; /* Smaller button font size */
+    padding: 10px 20px; /* Adjust padding */
+  }
+}
+
+/* For devices smaller than 768px (e.g., mobile phones) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0; /* Reduced padding */
+  }
+
+  .container {
+    padding: 0 1rem; /* Further reduce padding */
+    flex-direction: column; /* Stack header content vertically */
+    align-items: flex-start;
+  }
+
+  .container h1 {
+    font-size: 28px; /* Smaller title */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .hero {
+    padding: 20px;
+    height: auto; /* Adjust hero height */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Ensure hero content takes full width */
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px; /* Smaller heading */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Adjust paragraph font size */
+  }
+
+  .hero-image img {
+    max-width: 90%; /* Limit the width of the hero image */
+  }
+
+  .hero-content .cta-button {
+    font-size: 14px; /* Smaller button font */
+    padding: 10px 15px; /* Reduced padding */
+  }
+}
+
+/* For devices smaller than 480px (e.g., very small mobile devices) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px; /* Further reduce header padding */
+  }
+
+  .container h1 {
+    font-size: 24px; /* Smaller heading for mobile */
+  }
+
+  .hero {
+    padding: 15px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 28px; /* Smaller hero heading */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Smaller paragraph text */
+  }
+
+  .hero-content .cta-button {
+    font-size: 12px; /* Smaller button font */
+    padding: 8px 16px; /* Reduced padding */
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Further limit hero image width */
+  }
+}
+
+/* Search Section */
+.search-bar {
+  background-color:#007bff; /* Blue background */
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto; /* Reduced margin to decrease space */
+  width: 100%;
+  border: #007bff;
+}
+
+.search-bar form {
+  /*  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Add space between all form items */
+  width: 100%;
+  flex-wrap: wrap; /* Allow form items to wrap on smaller screens */
+}
+
+.search-field {
+  flex: 1;
+  min-width: 250px; /* Minimum width for search inputs */
+  margin-right: 15px; /* Optional: add space between the fields */
+}
+
+.search-bar input,
+.search-bar select {
+  /* color:white; */
+  width: 100%; /* Make sure input and select take full width */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-bar button {
+  flex-shrink: 0; /* Prevent the button from shrinking */
+  padding: 12px;
+  background-color: white;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 120px; /* Optional: Ensure button has a minimum width */
+}
+.search-field {
+  border-color: white;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+.search-bar button:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large devices (desktops) */
+@media (max-width: 1200px) {
+  .search-bar {
+    padding: 1rem;
+  }
+
+  .search-bar form {
+    gap: 15px; /* Slightly reduce the gap */
+  }
+
+  .search-field {
+    color:black;
+    min-width: 200px; /* Reduce the minimum width on smaller screens */
+  }
+}
+
+/* Medium devices (tablets and below) */
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 1rem; /* Adjust padding to fit smaller screens */
+  }
+
+  .search-bar form {
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Add space between stacked items */
+  }
+
+  .search-field {
+    width: 100%; /* Ensure the input fields take full width */
+    margin-right: 0; /* Remove margin */
+  }
+
+  .search-bar button {
+    width: 100%; /* Make the button full width */
+  }
+}
+
+/* Small devices (mobile phones) */
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 0.8rem; /* Adjust padding further for mobile */
+  }
+
+  .search-bar form {
+    gap: 10px; /* Reduce space between form items */
+  }
+
+  .search-field,
+  .search-bar select {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .search-bar button {
+    padding: 10px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size */
+    min-width: 100px; /* Reduce the button's min-width */
+  }
+}
+
+
+
+/*statistics */
+/* Statistics Section */
+.impact {
+  background-color: #f9fafc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.impact .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Equal space between cards */
+  margin: 0 auto; /* Center the cards */
+  max-width: 1200px; /* Ensures the container doesn't stretch too wide */
+  flex-wrap: no-wrap; /* Prevent cards from wrapping to the next line */
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  flex: 1;
+  min-width: 200px; /* Ensures the cards don’t shrink too much */
+  max-width: 280px; /* Set the maximum width for the cards */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0; /* No extra margin on the card itself */
+  box-sizing: border-box; /* Make sure padding is included in width calculations */
+}
+
+.stat-card h2 {
+  font-size: 36px;
+  color: #0033cc;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.stat-card p {
+  font-size: 18px;
+  color: #666666;
+  margin-top: 10px;
+}
+
+/* Adding icons to the card */
+.stat-card i {
+  font-size: 48px;
+  color: #0033cc;
+  margin-bottom: 15px;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .impact .container {
+    justify-content: center;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 200px; /* Shrinks the card size for smaller screens */
+    max-width: 100%; /* Makes cards full width on smaller screens */
+  }
+}
+
+
+/* Why Choose Us Section */
+/* Why Choose Us Section */
+/* Why Choose Section */
+.why-choose {
+  background-color: #f9fafc;
+  padding: 40px 20px; /* Adjusted padding */
+  margin-top: 1rem; /* Reduced top margin */
+  text-align: center;
+}
+
+.why-choose h1 {
+  font-size: 32px;
+  color: #0033cc;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-evenly; /* Ensures equal spacing between cards */
+  gap: 20px; /* Adjust space between the cards */
+  align-items: flex-start; /* Align cards to the top */
+  flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
+}
+
+.benefit-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 30%; /* Ensures each card takes up 30% of the container's width */
+  max-width: 400px; /* Optional: limits the card size */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper {
+  background-color: #0033cc;
+  color: white;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 32px;
+}
+
+.benefit-item h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Optional: Rearrange cards order */
+.benefit-item:nth-child(2) {
+  order: 3;  /* Move Online Job Portal to the middle */
+}
+
+.benefit-item:nth-child(3) {
+  order: 2;  /* Move Experienced Professionals to the last */
+}
+
+.benefit-item:nth-child(1) {
+  order: 1;  /* Health Focused stays in the first position */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .benefits {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    gap: 20px
+  }
+}
+
+.benefit-item {
+  max-width: 100%; /* Make cards full width */
+  flex: 1 1 100%; /* Allow cards to take full width on small screens */
+}
+
+
+/* Featured Jobs Section */
+.featured-jobs {
+  background-color: #f9fafc;
+  padding: 20px;
+  text-align: center;
+}
+
+.featured-jobs h1 {
+  font-size: 32px;
+  color: #0033cc;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Job Card */
+.job-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  width: 340px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Stack contents vertically */
+  justify-content: space-between; /* Distribute space between elements */
+}
+
+.jobs-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.job-card h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.job-card p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.job-card a.apply-button {
+  display: block;
+  text-align: center;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  max-width: 8rem;
+  margin: 2rem auto 1rem auto;
+}
+
+.job-card a.apply-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Success Unlocked Section */
+.user-stories {
+  background-color: #f9fafc;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.user-stories h1 {
+  font-size: 32px;
+  color: #0033cc;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.story-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.story-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.story-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.user-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: center;
+  margin-bottom: 15px;
+  border: 2px solid #0033cc;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.quote {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.rating {
+  font-size: 18px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.story-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0033cc;
+  margin-top: 10px;
+}
+
+.user-role {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+
+/* Responsive Adjustments */
+
+/* For devices smaller than 1200px (e.g., tablets) */
+@media (max-width: 1200px) {
+  .jobs-container {
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: space-between; /* Ensure there’s space between cards */
+  }
+
+  .job-card {
+    width: 100%; /* Allow job cards to take full width of their container */
+    max-width: 350px; /* Limit the max width of job cards */
+  }
+
+  .story-cards {
+    flex-wrap: wrap; /* Allow story cards to wrap */
+    justify-content: space-between;
+  }
+
+  .story-card {
+    max-width: 100%; /* Allow story cards to take full width on smaller screens */
+  }
+}
+
+/* For devices smaller than 768px (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .jobs-container {
+    flex-direction: column; /* Stack job cards vertically */
+    align-items: center; /* Center job cards */
+  }
+
+  .job-card {
+    width: 100%; /* Allow job cards to take full width */
+    max-width: 95%; /* Ensure cards don't stretch too wide */
+    margin-bottom: 20px; /* Add margin between cards */
+  }
+
+  .story-cards {
+    flex-direction: column; /* Stack story cards vertically */
+    align-items: center; /* Center story cards */
+  }
+
+  .story-card {
+    width: 100%; /* Allow story cards to take full width */
+    max-width: 95%; /* Prevent cards from becoming too wide */
+    margin-bottom: 20px; /* Add margin between cards */
+  }
+
+  .user-stories h1 {
+    font-size: 24px; /* Adjust title font size for smaller screens */
+  }
+
+  .quote {
+    font-size: 14px; /* Reduce quote font size */
+  }
+
+  .rating {
+    font-size: 16px; /* Reduce rating font size */
+  }
+}
+/* Video and Subscription Section */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures no content spills out */
+}
+
+.video-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%; /* Ensures the container doesn't exceed the wrapper's width */
+  box-sizing: border-box;
+}
+
+.video-container iframe {
+  width: 100%; /* Adapts to the container's width */
+  height: 350px;
+  max-width: 100%; /* Ensures the iframe doesn't overflow */
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%; /* Ensures the box fits within the wrapper */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Stacks items vertically */
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+
+  .subscription-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container iframe {
+    height: 200px;
+  }
+}
+
+/* General Footer Styling */
+footer {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-bottom: 2px solid #002699;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Address Section */
+.address-section {
+  flex: 2;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.address-section strong {
+  font-size: 16px;
+}
+
+/* Download Section */
+.download-section {
+  flex: 1;
+  text-align: center;
+}
+
+.download-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.store-icon {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.store-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media {
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #80b3ff;
+  transform: scale(1.2);
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.links ul li {
+  margin: 5px 0;
+}
+
+.links ul li a {
+  color: #d9e6ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+  font-weight: bold;
+  color: #0033cc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-section {
+    text-align: center;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .store-icon {
+    width: 80px; /* Adjust size for mobile */
+    height: 80px;
+  }
+
+  .footer-logo {
+    height: 80px;
+  }
+}
+
+/* Flash message container */
+.flash-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 1000;
+  display: none;
+}
+
+/* Flash message styling */
+.flash-message {
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slide-down 0.3s ease-out;
+}
+
+.flash-message.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.flash-message.error {
+  background-color: #f44336;
+  color: white;
+}
+
+.flash-message.info {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Slide-down animation */
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* Video Container */
+  .video-container {
+    padding: 0.5rem;
+    margin-left: 0;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  /* Subscription Box */
+  .subscription-box {
+    padding: 1rem;
+  }
+
+  .subscription-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .subscription-box input,
+  .subscription-box button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .store-icon {
+    width: 80px; /* Adjust size for mobile */
+    height: 80px;
+  }
+
+  .store-icon2 {
+    width: 80px;
+    height: 35px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    gap: 15px;
+    padding: 5px;
+  }
+
+  .video-container iframe {
+    height: 200px;
+  }
+
+  .subscription-box {
+    padding: 15px;
+  }
+
+  .subscription-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .subscription-box input,
+  .subscription-box button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    height: 70px;
+  }
+
+  .store-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

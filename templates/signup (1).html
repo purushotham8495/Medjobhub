@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Medjobhub</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="brand"><img  src="/images/med4.jpeg" alt="Doctor" height="40"> <span class="ics">Medjobhub</span> </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="content.html">Content</a></li>
+                    <li class="this_page"><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container1">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form id="signupForm" method="POST" action="{{ url_for('signup') }}">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" name="username" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="registerBtn">Register</button>
+                </div>
+            </form>
+            <p id="loginLink">Already have an account? <a href="signin.html">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html>

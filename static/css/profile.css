@@ -1,0 +1,367 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+/* Container Layout */
+.profile-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Header Section */
+/* Profile Header Section */
+.profile-header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-header .profile-pic {
+  width: 120px;  /* Set width */
+  height: 120px; /* Set height */
+  margin: 0 auto;
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Ensure the image fits in the circle */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+.profile-header .profile-pic img {
+  width: 100%;  /* Make the image fill the container */
+  height: 100%; /* Ensure it takes up the whole area */
+  object-fit: cover; /* Crop and scale the image to cover the circle */
+  transition: transform 0.3s ease;
+}
+
+.profile-header .profile-pic img:hover {
+  transform: scale(1.1); /* Add a hover effect if desired */
+}
+
+.profile-header .edit-btn {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  background: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.profile-header .profile-pic:hover .edit-btn {
+  display: block; /* Show edit button when hovering over profile picture */
+}
+
+  /* Edit Button Styling */
+  .edit-btn {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: -10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .edit-btn:hover {
+    background: #0056b3;
+  }
+  
+  .profile-pic:hover .edit-btn {
+    display: block; /* Display button on hover */
+  }
+  
+.button-group {
+  margin-top: 15px;
+}
+
+.follow-btn, .message-btn {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+.message-btn {
+  background: #6c757d;
+  color: #fff;
+}
+
+/* Profile Data Section */
+.profile-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.contact-info {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+  border: 2px solid #c0c0c0;
+    margin: 20px 0;
+  }
+
+  .contact-info h2 {
+    color: #007bff;
+  }
+/* Social Links Section */
+.social-links {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+  border: 2px solid #c0c0c0;
+    margin: 20px 0;
+  }
+  
+  .social-links h2 {
+    color: #007bff;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 20px;
+
+  }
+  
+  button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+
+  }
+  
+  #saved-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #saved-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  #saved-links ul li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  #saved-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+
+/* Additional Sections */
+.additional-sections{
+    background-color: #fff;
+}
+
+.additional-sections .section{
+  padding: 20px;
+  border: 2px solid #c0c0c0;
+  background: #f8f9fa;
+  padding-right: 15px;
+  margin: 15px 20px;
+  border-radius: 10px;
+
+  /* margin-bottom: 15px; */
+  /* width: 100%; */
+}
+
+.additional-sections .section h2{
+    color: #007bff;
+    margin-left: 20px;
+    
+}
+
+/* .additional-sections .section {
+  /* margin-bottom: 20px; */
+
+.additional-sections h4 {
+  /* margin-bottom: 10px; */
+  color: #333;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: none;
+  margin-left: 20px;
+  /* margin-bottom: 10px; */
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type="file"] {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-data {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+    margin: 15px 20px;
+
+  }
+  
+  .skills-section h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #skills-select, #custom-skill {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  button#add-skill-btn, button#add-custom-skill-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 20px;
+  }
+  
+  button#add-skill-btn:hover, button#add-custom-skill-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  #skills-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #skills-list li {
+    background: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #skills-list li span {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  #skills-list li button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #skills-list li button:hover {
+    background: #c82333;
+  }
+  
+
+  #profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    transform:scale(1.15);
+}
+
+#logout {
+    background-color: red;
+    margin-bottom: 10px;
+}

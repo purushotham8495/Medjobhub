@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+
+<body>
+    <header>
+      <div class="container">
+        <!-- Logo placed on the left -->
+        <img src="{{ url_for('static', filename='images/ss11.png') }}" alt="Image" class="stethoscope-img">
+        <h1>MedJobHub</h1>
+    
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="{{ url_for('medabout') }}">About</a></li>
+            <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{{ url_for('medregister') }}">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    {% block content %}
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <div class="contact-container">
+            <!-- Left Half: Image -->
+            <div class="contact-image">
+                <img src="{{ url_for('static', filename='images/medcontactus.jpg') }}" alt="Image" class="stethoscope-img">
+            </div>
+
+            <!-- Right Half: Contact Form -->
+            <div class="contact-form">
+                <h1><center>Contact Us</center></h1>
+                <p class="subtitle"><center>Any questions or remarks, just write us a message!</center></p> <!-- Added subtitle -->
+                <form id="contactForm" action="javascript:void(0);" onsubmit="submitForm()">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function submitForm() {
+            alert('Thank you for contacting us! We will get back to you soon.');
+            document.getElementById("contactForm").reset(); // Reset form after submission
+        }
+        
+    </script>
+    {% endblock %}
+
+    
+</body>
+</html>
